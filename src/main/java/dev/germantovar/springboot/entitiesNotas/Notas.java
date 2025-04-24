@@ -18,13 +18,18 @@ public class Notas {
 
     private String title;
     private String content;
+
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
-    private LocalDateTime createdAt;
+
 
     @PrePersist
     protected void onCreate(){
         createdAt = LocalDateTime.now();
     }
+
 }
