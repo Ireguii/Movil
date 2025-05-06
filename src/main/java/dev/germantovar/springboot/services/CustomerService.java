@@ -1,6 +1,6 @@
 package dev.germantovar.springboot.services;
 
-import dev.germantovar.springboot.entities.Customer;
+import dev.germantovar.springboot.entities.Usuario;
 import dev.germantovar.springboot.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +17,8 @@ public class CustomerService implements ICustomerService{
 
 
     @Override
-    public List<Customer> getAll(){
+    public List<Usuario> getAll(){
 
-        return (List<Customer>) repository.findAll();
+        return (List<Usuario>) repository.findAll();
     }
 }

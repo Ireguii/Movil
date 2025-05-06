@@ -1,7 +1,7 @@
 package dev.germantovar.springboot.controllers;
 
 
-import dev.germantovar.springboot.entities.Customer;
+import dev.germantovar.springboot.entities.Usuario;
 import dev.germantovar.springboot.repository.CustomerRepository;
 import dev.germantovar.springboot.services.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +20,6 @@ public class CustomerController {
     private CustomerRepository customerRepository;
 
     @GetMapping("lista")
-    public List<Customer> getAll() {return service.getAll();}
+    public List<Usuario> getAll() {return service.getAll();}
 
 }
